@@ -1,0 +1,6 @@
+clear;
+close all;
+I = imread('Fig0222(b)(cameraman).tif'); %read
+disp('')
+fullColor(I,4);
+disp('zzz')
