@@ -1,7 +1,7 @@
 function [quantizedImage] =  reduceIntensityLevel(originalImage,intensityLevel)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
-basicRange = 2^(8-intensityLevel)
+basicRange = 256/intensityLevel;
 [numRows,numCols, brightLevel] = size(originalImage);
 for i = 1:numRows
     for j = 1:numCols

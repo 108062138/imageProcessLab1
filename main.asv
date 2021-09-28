@@ -1,6 +1,17 @@
 clear;
 close all;
-I = imread('Fig0222(b)(cameraman).tif'); %read
-disp('')
-fullColor(I,4);
-disp('zzz')
+originalImage = imread('Fig0222(b)(cameraman).tif'); %read
+subplot(1,3,1);imshow(originalImage);title('input image');
+disp('initial process!')
+testV = [3 4]
+testM = [1 2 ;3 4]
+vtran = testV'
+invM = inv
+res = testM * vtran
+%resizeImage_replicationRes = resizeImage_replication(originalImage,1/2);
+%subplot(1,3,2);imshow(reduceIntensityLevelRes);title('opt image');
+%reduceIntensityLevelRes =  reduceIntensityLevel(originalImage,8);
+%subplot(1,3,3);imshow(resizeImage_replicationRes,[]);title('resized_repl image');
+resizeImage_bilinearRes = resizeImage_bilinear(originalImage, 3);
+subplot(1,3,2);imshow(resizeImage_bilinearRes);title('resized_bilinear image');
+disp('finish process!')
