@@ -10,7 +10,6 @@ for i = 1:numRows
         originalImage(i,j) = numRanges * basicRange;
     end
 end
-
 quantizedImage = originalImage;
 
 end
